@@ -1,0 +1,14 @@
+Package: amdgpu-dkms
+Version: 1:6.12.12.60400-2147987.24.04
+Architecture: all
+Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
+Installed-Size: 510639
+Depends: dkms (>= 1.95), libc-dev | libc6-dev, autoconf, automake, initramfs-tools, amdgpu-dkms-firmware (= 1:6.12.12.60400-2147987.24.04)
+Recommends: dwarves
+Conflicts: rock-dkms (<< 1:6.12.12.60400-2147987.24.04)
+Breaks: rock-dkms (<< 1:6.12.12.60400-2147987.24.04)
+Replaces: rock-dkms (<< 1:6.12.12.60400-2147987.24.04)
+Provides: rock-dkms
+Section: misc
+Priority: optional
+Description: amdgpu driver in DKMS format.

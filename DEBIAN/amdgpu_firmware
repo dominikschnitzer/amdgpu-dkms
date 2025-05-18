@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# amdgpu-firmware initramfs-tools hook script
+#
+# Installs copies of firmware files for the amdgpu driver
+# to the early initramfs
+
+PREREQ=""
+
+prereqs()
+{
+	echo "$PREREQ"
+}
+
+case $1 in
+prereqs)
+	prereqs
+	exit 0
+	;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+#
+# Copy AMD firmware to /lib/firmware/<KERNEL_VERSION> to be seen
+# by mkinitramfs tool during initrd.img creation
+#
+copy_amd_firmware() {
+	local dir="/lib/firmware"
+
+	mkdir -p $dir/$version
+	cp -a $dir/updates/amdgpu $dir/$version
+}
+
+#
+# Remove AMD firmware at /lib/firmware/<KERNEL_VERSION> location
+#
+clean_amd_firmware() {
+	local dir="/lib/firmware/$version"
+
+	rm -rf $dir/amdgpu
+	if [ -z "$(ls -A $dir)" ]; then
+		rm -rf $dir
+	fi
+}
+
+copy_amd_firmware
+manual_add_modules amdgpu
+clean_amd_firmware

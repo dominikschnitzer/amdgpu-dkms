@@ -1,0 +1,27 @@
+#!/bin/sh
+
+NAME=amdgpu
+VERSION=6.12.12-2147987.24.04
+
+set -e
+
+case "$1" in
+	remove|deconfigure|upgrade)
+		if [ "$(dkms status -m $NAME)" ]; then
+			rm -f /usr/share/initramfs-tools/hooks/01-amdgpu_firmware
+			dkms remove -m $NAME -v $VERSION --all
+		fi
+		;;
+
+	failed-upgrade)
+		;;
+
+	*)
+		echo "prerm called with unknown argument \`$1'" >&2
+		exit 1
+		;;
+esac
+
+
+
+exit 0

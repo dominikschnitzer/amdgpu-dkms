@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+PACKAGE_NAME=amdgpu-dkms
+TMPDIR="/var/tmp"
+
+case "$1" in
+	remove|upgrade|purge)
+		if [ -f ${TMPDIR}/${PACKAGE_NAME}-kernels ]; then
+			while read kver; do
+				update-initramfs -u -k $kver
+			done < ${TMPDIR}/${PACKAGE_NAME}-kernels
+			if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
+				rm -f ${TMPDIR}/${PACKAGE_NAME}-kernels
+			fi
+		fi
+		;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+		;;
+
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+		;;
+esac

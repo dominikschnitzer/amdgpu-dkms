@@ -1,0 +1,28 @@
+This is a modified subset of the Linux kernel sources.
+Linux was written by Linus Torvalds <Linus.Torvalds@cs.Helsinki.FI>
+and others.
+
+This package was put together by AMD, in part from sources retrieved from the
+upstream linux git. All binaries are built at install time; this package
+includes all sources, which are installed under '/usr/src/'.
+
+All files located in /usr/src/*/firmware are subject to a firmware license,
+which can be found in '/usr/share/doc/amdgpu-dkms-firmware/LICENSE'.
+
+Linux is copyrighted by Linus Torvalds and others.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; version 2 dated June, 1991.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+On Ubuntu Linux systems, the complete text of the GNU General
+Public License v2 can be found in `/usr/share/common-licenses/GPL-2'.
