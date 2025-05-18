@@ -1,5 +1,5 @@
 Package: amdgpu-dkms
-Version: 1:6.12.12.60400-2147987.24.04
+Version: 1:6.12.12.60400-2147987.24.04-2
 Architecture: all
 Maintainer: Advanced Micro Devices (AMD) <gpudriverdevsupport@amd.com>
 Installed-Size: 510639
