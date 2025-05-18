@@ -133,7 +133,7 @@ AC_DEFUN([AC_AMDGPU_DRM_HEADERS], [
     dnl # v6.11-rc7-1514-gd07fdf922592
     dnl # drm: Add client-agnostic setup helper
     dnl #
-    AC_KERNEL_CHECK_HEADERS([drm/drm_client_setup.h])
+    AC_KERNEL_CHECK_HEADERS([drm/clients/drm_client_setup.h])
 
 	dnl #
     dnl # v6.12-rc2-586-gdf7e8b522a60

@@ -196,6 +196,10 @@
 /* drm_atomic_private_obj_init() wants 4 args */
 #undef HAVE_DRM_ATOMIC_PRIVATE_OBJ_INIT_4ARGS
 
+/* Define to 1 if you have the <drm/clients/drm_client_setup.h> header file.
+   */
+#undef HAVE_DRM_CLIENTS_DRM_CLIENT_SETUP_H
+
 /* drm_client_dev_resume() is available */
 #undef HAVE_DRM_CLIENT_DEV_RESUME
 
@@ -474,9 +478,6 @@
 
 /* Define to 1 if you have the <drm/drm_client_event.h> header file. */
 #undef HAVE_DRM_DRM_CLIENT_EVENT_H
-
-/* Define to 1 if you have the <drm/drm_client_setup.h> header file. */
-#undef HAVE_DRM_DRM_CLIENT_SETUP_H
 
 /* Define to 1 if you have the <drm/drm_eld.h> header file. */
 #undef HAVE_DRM_DRM_ELD_H

@@ -5,7 +5,7 @@ dnl #
 AC_DEFUN([AC_AMDGPU_DRM_CLIENT_SETUP], [
      AC_KERNEL_DO_BACKGROUND([
             AC_KERNEL_TRY_COMPILE([
-                #include <drm/drm_client_setup.h>
+                #include <drm/clients/drm_client_setup.h>
             ], [
                 drm_client_setup(NULL, NULL);
             ], [
