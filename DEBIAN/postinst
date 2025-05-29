@@ -4,8 +4,8 @@ set -e
 
 NAME=amdgpu
 PACKAGE_NAME=amdgpu-dkms
-CVERSION=6.12.12-2147987.24.04
-ARCH=$(dpkg --print-architecture)
+CVERSION=6.12.12-2164967.24.04
+ARCH=$(dpkg-architecture -qDEB_BUILD_GNU_CPU)
 TMPDIR="/var/tmp"
 
 dkms_configure () {
