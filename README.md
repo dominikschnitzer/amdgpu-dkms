@@ -9,4 +9,4 @@ Rebuild with:
 
 ## Install
 
-`dpkg -i amdgpu-dkms_*_all.deb`
+`dpkg -i amdgpu-dkms_$(cat DEBIAN/control | grep "Version:" | sed -e "s/.*1://g")_all.deb`
